@@ -14,4 +14,6 @@ if memcache_servers = ENV["MEMCACHE_SERVERS"]
     entitystore: "memcached://#{memcache_servers}"
 end
 
+use Rack::Deflater
+
 run Sinatra::Application
