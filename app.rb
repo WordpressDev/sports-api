@@ -48,7 +48,7 @@ end
 set :views, '.'
 
 before do
-  expires 300, :public
+  cache_control :public, max_age: 300
 end
 
 error do
