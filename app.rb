@@ -48,7 +48,7 @@ end
 set :views, '.'
 
 before do
-  expires 300, :public, :must_revalidate
+  expires 300, :public
 end
 
 error do
