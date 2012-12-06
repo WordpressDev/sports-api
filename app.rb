@@ -47,6 +47,10 @@ end
 
 set :views, '.'
 
+before do
+  expires 300, :public, :must_revalidate
+end
+
 error do
   { :error => 'Internal server error' }.to_json
 end
